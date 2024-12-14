@@ -1,0 +1,64 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333; 
+    padding: 10px 20px;
+    width: 100%;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    z-index: 1000;
+    margin-bottom: 70px;
+  }
+  
+  .navbar-logo {
+    text-decoration: none; 
+    color: white;
+    font-weight: sans-serif;
+  }
+  
+  .navbar-logo h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: bold;
+    color: white; 
+    text-decoration: none; 
+  }
+  
+  .navbar-links {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-item {
+    margin-left: 20px;
+  }
+
+  .navbar-welcome {
+    color: #fff;
+    margin-top: 14px;
+  }
+
+  .navbar-link, .navbar-logout {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    background-color: #4A8BDF; 
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .navbar-link:hover, .navbar-logout:hover {
+    background-color: #3b7cc4; 
+  }
+  
+  

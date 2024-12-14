@@ -1,4 +1,3 @@
-/* Aplicar la fuente sans-serif globalmente */
 * {
   font-family: 'Arial', sans-serif;
   margin: 0;
@@ -6,9 +5,8 @@
   box-sizing: border-box;
 }
 
-/* Estilo del body */
 body {
-  background-color: #f4f4f9; /* Fondo suave para la página */
+  background: linear-gradient(135deg, rgba(74, 139, 223, 0.8), rgba(106, 27, 154, 0.8));
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,7 +14,6 @@ body {
   margin: 0;
 }
 
-/* Contenedor principal */
 .login-container {
   width: 100%;
   max-width: 400px;
@@ -27,66 +24,58 @@ body {
   text-align: center;
 }
 
-/* Título de la sección */
 .login-title {
   font-size: 28px;
-  color: #333; /* Color oscuro para el título */
+  color: #333; 
   margin-bottom: 20px;
   font-weight: bold;
 }
 
-/* Estilo para los mensajes de error generales */
 .error-message {
-  color: #D22828; /* Rojo para los mensajes de error */
+  color: #D22828; 
   font-size: 14px;
   text-align: center;
   margin-bottom: 15px;
 }
 
-/* Estilo para el formulario */
 .login-form {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-/* Agrupación de cada campo de entrada */
 .input-group {
   position: relative;
 }
 
-/* Estilo para los campos de entrada */
 .input-field {
   width: 100%;
   padding: 12px;
   margin: 8px 0;
-  border: 1px solid #ccc; /* Borde sutil gris para los campos */
+  border: 1px solid #ccc; 
   border-radius: 6px;
-  background-color: #f9f9f9; /* Fondo suave gris para los campos */
-  color: #333; /* Texto oscuro */
+  background-color: #f9f9f9; 
+  color: #333; 
   font-size: 14px;
   transition: border 0.3s ease;
 }
 
-/* Efecto de foco en los campos de entrada */
 .input-field:focus {
-  border-color: #4A8BDF; /* Azul para el borde al enfocar */
+  border-color: #4A8BDF; 
   outline: none;
 }
 
-/* Mensajes de error para cada campo */
 .error-text {
   color: #D22828;
   font-size: 12px;
   margin-top: 5px;
 }
 
-/* Estilo para el botón de enviar */
 .submit-button {
+  color: #fff;
   width: 100%;
   padding: 14px;
-  background-color: #4A8BDF; /* Azul para el fondo del botón */
-  color: white;
+  background-color: #4A8BDF;
   border: none;
   border-radius: 6px;
   font-size: 16px;
@@ -94,27 +83,23 @@ body {
   transition: background-color 0.3s ease;
 }
 
-/* Efecto hover en el botón */
 .submit-button:hover {
-  background-color: #3b7cc4; /* Color ligeramente más oscuro al hacer hover */
+  background-color: #3b7cc4; 
 }
 
-/* Estilo para el texto de crear cuenta */
 .signup-link {
   margin-top: 15px;
   font-size: 14px;
 }
 
-/* Enlace de crear cuenta */
 .link {
-  color: #4A8BDF; /* Azul para el enlace */
+  color: #4A8BDF; 
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
-/* Efecto hover en el enlace */
 .link:hover {
-  color: #3b7cc4; /* Color ligeramente más oscuro para el enlace al pasar el cursor */
+  color: #3b7cc4;
   text-decoration: underline;
 }

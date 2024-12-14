@@ -1,8 +1,9 @@
 import { useForm } from "react-hook-form";
 import { useAuth } from "../context/AuthContext";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-import "../assets/LoginPage.css"
+import "../assets/LoginPage.css";
+import { useEffect } from "react";
 
 function LoginPage() {
   const {
@@ -11,32 +12,38 @@ function LoginPage() {
     formState: { errors },
   } = useForm();
 
-  const { signin, errors: signinErrors } = useAuth();
+  const { signin, errors: signinErrors, isAuthenticated } = useAuth();
+  const navigate = useNavigate();
 
   const onSubmit = handleSubmit((data) => {
     signin(data);
   });
+
+  useEffect(() => {
+    if (isAuthenticated) navigate("/tasks");
+  }, [isAuthenticated]);
 
   return (
     <div className="login-container">
       <div className="login-title">Inicio sesión</div>
 
       {signinErrors.map((error, i) => (
-          <div className="error-message" key={i}>
-            {error}
-          </div>
-        ))}
+        <div className="error-message" key={i}>
+          {error}
+        </div>
+      ))}
 
       <form onSubmit={onSubmit} className="login-form">
         <div className="input-group">
           <input
-            type="email"
+            type="text"
             {...register("email", { required: true })}
-            placeholder="Correo electrónico"
+            placeholder="Correo electronico"
             className="input-field"
           />
+
           {errors.email && (
-            <p className="error-text">El email es obligatorio</p>
+            <p className="error-text">El correo electronico es obligatorio</p>
           )}
         </div>
 

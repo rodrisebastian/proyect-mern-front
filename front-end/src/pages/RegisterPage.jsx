@@ -14,7 +14,7 @@ function RegisterPage() {
   const { signup, isAuthenticated, errors: registerErrors } = useAuth();
   const navigate = useNavigate();
 
-  useEffect(() => {
+  useEffect(() => { //Si el usuario esta autenticado, redirige a la pagina de tareas
     if (isAuthenticated) navigate("/tasks");
   }, [isAuthenticated]);
 
