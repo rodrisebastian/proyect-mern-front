@@ -3,3 +3,10 @@ Este proyecto frontend forma parte de una aplicación construida con MongoDB, Ex
 La aplicacion esta disponible en el port:
 http://localhost:4000/api 
 Repositorio back-end: https://github.com/rodrisebastian/proyecto-mern.git
+
+Hooks y Servicios=
+useEffect: verifica si hay un token en las cookies al montar el componente.
+useContext: se utiliza para acceder al contexto de autenticacion y de tareas.
+En TaskContext se utilizan estados para manejar las tareas.
+
+Algunos servicios estan relacionados con la autenticacion como registerRequest(user), loginRequest(user), y verifyTokenRequest. Otros estan relacionados a las tareas como getTasksRequest(), getTaskRequest(id), createTasksRequest(task), updateTaskRequest(id, task) y deleteTaskRequest(id).
